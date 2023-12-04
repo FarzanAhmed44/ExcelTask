@@ -50,7 +50,7 @@ public class ExcelController : Controller
             }
             else
             {
-                return BadRequest("No file uploadeds.");
+                return BadRequest("No file uploaded.");
             }
         }
         catch (Exception ex)
