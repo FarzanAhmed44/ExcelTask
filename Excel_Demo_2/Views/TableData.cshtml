@@ -1,0 +1,31 @@
+﻿@model List<PeerGroup>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Particular</th>
+        <th>Unit</th>
+        <th>Empty</th>
+        <th>Industry Quartile</th>
+        <th>Peer Group Average</th>
+        <th>Peer Group Median</th>
+        <th>Peer Group Min</th>
+        <th>Peer Group Max</th>
+    </tr>
+
+    @foreach (var peerGroup in Model)
+    {
+        <tr>
+            <td>@peerGroup.Particular</td>
+            <td>@peerGroup.Unit</td>
+            <td>@peerGroup.Empty</td>
+            <td>@peerGroup.IndustryQuartile</td>
+            <td>@peerGroup.PeerGroupAverage</td>
+            <td>@peerGroup.PeerGroupMedian</td>
+            <td>@peerGroup.PeerGroupMin</td>
+            <td>@peerGroup.PeerGroupMax</td>
+        </tr>
+    }
+</table>
+
+<p>Worksheet Count: @ViewBag.WorksheetCount</p>
