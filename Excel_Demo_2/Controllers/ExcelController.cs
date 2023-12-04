@@ -38,6 +38,7 @@ public class ExcelController : Controller
 
                 var existingRecords = _dbContext.peerGroups.ToList();
                 _dbContext.peerGroups.RemoveRange(existingRecords);
+
                 _dbContext.SaveChanges();
 
                 _dbContext.peerGroups.AddRange(data.PeerGroups);
@@ -49,7 +50,7 @@ public class ExcelController : Controller
             }
             else
             {
-                return BadRequest("No file uploaded.");
+                return BadRequest("No file uploadeds.");
             }
         }
         catch (Exception ex)
